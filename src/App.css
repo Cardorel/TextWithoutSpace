@@ -24,7 +24,7 @@ p.footer-paragraph {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  height: 23%;
+  height: 25%;
 
 }
 
@@ -62,8 +62,18 @@ form button:hover {
   transition: opacity 380ms ease-in-out;
 }
 
-.form-container .text-formatted {
+.form-container .text-format-content {
   margin-top: 25px;
   width: 40%;
   text-align: center;
+  padding-top: 15px;
+  position: relative;
+}
+
+.text-format-content button {
+  border: none;
+  outline: none;
+  padding: 8px 25px;
+  color: black;
+  cursor: pointer;
 }

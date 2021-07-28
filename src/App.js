@@ -5,6 +5,7 @@ function App() {
   const [text, setText] = useState("");
   const [error, setError] = useState("");
   const [textFormatted, setTextFormatted] = useState("");
+  const [copyText, setCopyText] = useState("Copy this text");
   const date = new Date();
   const handleTextSubmit = (e) => {
     e.preventDefault();
@@ -18,6 +19,11 @@ function App() {
       setText("");
     }
   };
+
+  const handleClickCopyText = () => {
+    navigator.clipboard.writeText(textFormatted);
+    setCopyText("Copied !");
+  };
   return (
     <div>
       <div className='form-container'>
@@ -30,7 +36,12 @@ function App() {
           <small className='text-validation'>{error}</small>
           <button type='submit'>Format text</button>
         </form>
-        <p className='text-formatted'>{textFormatted}</p>
+        <div className='text-format-content'>
+          <p className='text-formatted'>{textFormatted}</p>
+          {textFormatted !== "" && (
+            <button onClick={handleClickCopyText}>{copyText}</button>
+          )}
+        </div>
       </div>
       <footer>
         <hr />
