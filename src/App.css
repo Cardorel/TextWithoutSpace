@@ -1,0 +1,69 @@
+:root {
+  --border-color: black;
+}
+
+.form-container {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+p.footer-paragraph {
+  text-align: center;
+}
+
+.footer-paragraph a {
+  text-decoration: none;
+}
+
+.form-container form {
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 23%;
+
+}
+
+form textarea {
+  all: unset;
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  padding: 6px;
+}
+
+form textarea::placeholder {
+  font-weight: bold;
+}
+
+form button {
+  border: none;
+  outline: none;
+  padding: 8px;
+  border-radius: 4px;
+  margin-top: 20px;
+  color: white;
+  background-color: #0099ff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: opacity 380ms ease-in-out;
+}
+
+form small.text-validation {
+  color: red;
+  margin: 3px;
+}
+
+form button:hover {
+  opacity: 0.8;
+  transition: opacity 380ms ease-in-out;
+}
+
+.form-container .text-formatted {
+  margin-top: 25px;
+  width: 40%;
+  text-align: center;
+}
