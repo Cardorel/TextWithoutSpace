@@ -15,6 +15,7 @@ function App() {
     } else {
       let formatText = text.split(" ").join("");
       setTextFormatted(formatText);
+      setCopyText("Copy this text");
       setError("");
       setText("");
     }
